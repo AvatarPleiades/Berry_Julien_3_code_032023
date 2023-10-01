@@ -1,0 +1,403 @@
+/****** General ***********/
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+:root {
+    --main-color: #0065FC;
+    --main-bg-color: #F2F2F2;
+    --filter-bg-color: #DEEBFF;
+}
+
+.fa-solid {
+    color: var(--main-color);
+}
+
+body {
+    margin: 0;
+    font-size: 16px;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1440px;
+    min-width: 1024px;
+    margin: auto;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+.section-title {
+    margin: 0;
+    font-size: 22px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.3));
+}
+
+.card img {
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 16px;
+}
+
+.euro {
+    font-weight: 700;
+}
+
+.neutralStar {
+    color: var(--main-bg-color)
+}
+
+.directionRow { /*Class pour donner le Flex Rox*/
+    display: flex
+}
+
+.directionColumn { /*Class pour donner le Flex Column*/
+    display: flex;
+    flex-direction: column;
+}
+
+.no__underline { /*On enlève le soulignage sous les liens*/
+    color: #000000;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.size { /*On ajoute cette classe pour définir cette taille sur certains paragraphes*/
+    font-size: 14px;
+}
+
+/****** Header ******/
+ul { /*On remet le padding et le margin des listes à 0 pour éviter le décalage*/
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+li { /*Propriété des boutons hébergements et activités*/
+    padding: 14px 25px;
+    font-size: 17px;
+}
+
+.header { /*Taille du header et espace entre le logo et le menu + centrage du logo sur l'axe vertical*/
+    justify-content: space-between;
+    align-items: center;
+}
+
+.booki__logo { /*Taille du logo en lui-même*/
+    width: 61px;
+}
+
+.nav__item a { /*On dit d'aller chercher le texte a dans nav item et de le colorer en noir en enlevant le surlignage*/
+    text-decoration: none;
+    color: #000000;
+}
+
+.nav__item:hover { /*On ajoute une barre de sélection bleue au survol*/
+    border-top: 3px solid #0065FC;
+}
+
+.nav__item a:hover { /*Couleur des textes du menu au survol*/
+    color: #0065FC;
+}
+
+.nav li { /*On ajoute cette partie pour éviter que le menu ne descende au survol*/
+    border: 3px solid transparent;
+}
+
+/****** Search Bar (+Headline) ******/
+form { /*On définit la zone de recherche*/
+    display: inline-block;
+    width: 100%;
+    margin-top: 30px;
+}
+
+form h1 { /*On change la taille du titre de la Headline*/
+    font-size: 22px;
+}
+
+form i { /*On règle la couleur de fond ou il y a le logo et l'écartemenet des bordures*/
+    background-color: #F2F2F2;
+    padding: 18px 18px 17px 18px; 
+    border-radius: 15px 0 0 15px;
+    margin-top: 35px; /*On créer l'espace entre la barre de recherche de la headline*/
+}
+
+form input { /*Réglages de la zone de texte*/
+    text-align: center;
+    border: 1px solid #F2F2F2;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 14px 0px 14px 0px;
+    margin-left: -5px;
+}
+
+form input::placeholder { /*On change la couleur du placeholder*/
+    color: black;
+}
+
+form button { /*On fait les réglages du bouton rechercher*/
+    border-radius: 0 14px 14px 0;
+    background-color: #0065FC;
+    border: 1px solid #0065FC;
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 14px 16px 14px 16px;
+    cursor: pointer; /*On ajoute un effet pointeur au survol*/
+    margin-left: -5px;
+}
+
+/****** Filters Bar ******/
+.filters__bar { /*On définit le positionnement des filtres par rapport au formulaire de recherche*/
+    display: flex;
+    margin-top: 35px;
+}
+
+#filters { /*On dit au filtre de s'aligner sur l'axe horizontal et d'avoir un espacement avec le texte filtres*/
+    display: flex;
+    margin-left: 15px;
+}
+
+.filter__box { /*On définit les contour des bordure de chaque bouton*/
+    display: flex;
+    align-items: center;
+    padding: 18px;
+    margin: 10px 5px;
+    height: 10px;
+    border: 2px solid #d9d9d9;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.filter__box span { /*On met la police en gras et on ajoute 10px d'espacement avec les icônes*/
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.filter__box:hover { /*On règle le changement de couleur de fond au survol*/
+    background: #DEEBFF;
+}
+
+/****** Info Bar******/
+.infobar { /*On place le texte de la barre d'information par rapport aux filtres et à la marge*/
+    margin: 37.5px 0px 37.5px 0px;
+}
+
+.fa-info { /*On place le i dans le cercle*/
+    width: 16px;
+    border: 1px solid rgb(120, 118, 118);
+    border-radius: 100px;
+    text-align: center;
+    padding: 4px;
+    margin-right: 10px;
+}
+
+/****** Hebergements and Populaires ******/
+.hebergements-and-populaires { /*On créer l'espace entre les hébergements et les populaires*/
+    justify-content: space-between;
+}
+
+.hebergements-and-populaires section { /*On définit les box derrière les catégories*/
+    background-color: var(--main-bg-color);
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+/****** Hebergements ***********/
+.hebergements { /*On définit la taille de la section hébergement et on la place*/
+    width: 66%;
+    padding: 7px 30px;
+}
+
+.hebergements h2 { /*On dit au titre de ne pas mettre de margin automatique avec la box*/
+    margin-bottom: 0;
+}
+
+.offers__main__cards { /*On définit la taille de la première rangée d'offre d'hébergement*/
+    gap: 30px;
+    width: 100%;
+}
+
+.main__cards { /*On définit la taille d'une carte et ses autres propriétés*/
+    align-items:center;
+    padding: 0px 0px 15px;
+    width: 100%;
+    height: 207.25px;
+    background: #ffffff;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.offers__main__cards .card-content { /*On définit la zone d'écriture de la carte*/
+    gap: 8px;
+    width: 100%;
+    height: 33%;
+    margin-left: 20px;
+}
+
+.offers__main__cards .main__cards { /*On positionne la carte par rapport au block*/
+    margin-top: 33px;
+}
+
+.main__cards img { /*Réglages des images dans les cartes*/
+    box-sizing: border-box;
+    width: 100%;
+    height: 67%;
+    border: 5px solid #ffffff;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.offers__main__cards .card-title { /*Réglages des titres des cartes*/
+    margin-top: 4px;
+    margin-bottom: 8px;
+}
+
+.offers__main__cards .card-subtitle { /*Réglages des sous-titres des cartes*/
+    margin: 0;
+}
+
+.offers__main__cards .card-rating { /*Réglages des étoiles de notation*/
+    margin-bottom: 8px;
+    margin-top: -6px;
+}
+
+.align__subtitle { /*On ajoute un espacement entre le titre et le sous-titre*/
+    margin-top: 6px;
+}
+
+/****** Show More ******/
+.show__more { /*Réglage bouton Afficher plus*/
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 30px; 
+    margin-bottom: 15px;
+}
+
+.show__button { /*On retire le soulignage du bouton*/
+    color: #000000;
+    text-decoration: none;
+}
+
+/****** Populaires ***********/
+.populaires {
+    width: 32%;
+    padding: 30px;
+}
+
+.populaires-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.populaires-cards .card {
+    display: flex;
+    margin-top: 33px;
+    cursor: pointer;
+}
+
+.populaires-cards img {
+    width: 33%;
+    height: 134px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.populaires-cards .card-content {
+    width: 67%;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.populaires-cards .card-title {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.populaires-cards .card-subtitle {
+    margin: 0;
+    font-size: 14px;
+}
+
+.populaires-cards .card-rating {
+    margin-bottom: 5px;
+}
+
+/****** Activity ******/
+.activity { /*Réglages du block Activité*/
+    padding: 30px;
+    height: 559.02px;
+}
+
+.activity__container { /*Réglages du block qui contient les cartes d'activités*/
+    gap: 30px; /*Espacement entre les activités*/
+}
+
+.activity__cards { /*Réglages des cartes*/
+    width: 100%;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 20px 20px 20px 20px;
+    cursor: pointer;
+}
+
+.activity img { /*Réglages des images dans les cartes*/
+    width: 100%;
+    height: 380px;
+    border-radius: 20px 20px 0px 0px;
+    object-fit: cover;
+}
+
+.activity__txt { /*Création du bloc ou apparaitrons les noms des activités*/
+    width: 100%;
+    border-radius: 0px 0px 20px 20px;
+}
+.card__title { /*Nom des activités sur les cartes*/
+    width: 100%;
+    font-size: 16px;
+    line-height: 19px;
+    margin-left: 19px;
+}
+
+/****** Footer ******/
+.footer__container { /*Bordure du footer*/
+    background: var(--main-bg-color);
+    margin-top: 20px;
+    width: 100%;
+}
+
+.footer__container li { /*On ajuste la position de la liste dans le footer*/
+    padding: 7px 0px;
+    width: 100%;
+}
+
+.footer__container ul { /*On définit une marge et une largeur à ce qui est dans nos ul*/
+    margin: 0 20px 0 20px;
+    width: 100%;
+}
+
+.footer__container h3 { /*Marge des titres*/
+    margin-left: 20px
+}
+
+.about { /*Marge à droite de la catégorie*/
+    margin-right: 19%;
+}
+
+.our__possibility { /*Marge à droite de la catégorie*/
+    margin-right: 19%;
+}
