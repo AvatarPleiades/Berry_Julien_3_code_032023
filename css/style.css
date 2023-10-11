@@ -21,7 +21,7 @@ body {
 .main-container {
     width: 100%;
     max-width: 1440px;
-    min-width: 1024px;
+    min-width: 320px;
     margin: auto;
     padding: 0 50px;
     box-sizing: border-box;
@@ -401,3 +401,90 @@ form button { /*On fait les réglages du bouton rechercher*/
 .our__possibility { /*Marge à droite de la catégorie*/
     margin-right: 19%;
 }
+
+/*Media Queries Mobile*/
+
+@media (max-width: 768px) {
+	header {
+		width: 100%;
+	}
+    .search__place button {
+        margin-left: 80px;
+        border-radius: 14px 14px 14px 14px;
+    }
+    #filters {
+        flex-direction: column;
+    }
+    .hebergements-and-populaires {
+        flex-direction: column;
+    }
+    .hebergements {
+        padding: 7px 0px;
+    }
+    .offers__main__cards {
+        flex-direction: column;
+    }
+    .main__cards {
+        width: 150%;
+        height: 45vh;
+    }
+    .populaires {
+        width: 100%;
+        height: 45vh;
+        padding: 0px;
+    }
+    .activity {
+        padding: 0px;
+        margin-top: 260px;
+    }
+    .activity__container {
+        flex-direction: column;
+    }
+    .footer__container {
+        flex-direction: column;
+        margin-top: 1340px;
+    }
+}
+
+/*Media Queries Tablette*/
+
+@media only screen 
+  and (min-width: 768px) 
+  and (max-width: 840px) {
+    header {
+		width: 100%;
+	}
+    .search__place button {
+        margin-left: 80px;
+        border-radius: 14px 14px 14px 14px;
+    }
+    .hebergements-and-populaires {
+        flex-direction: column;
+    }
+    .hebergements {
+        width: 100%;
+        padding: 7px 0px;
+    }
+    .offers__main__cards {
+        flex-direction: row;
+    }
+    .main__cards {
+        width: 70%;
+        height: 25vh;
+    }
+    .populaires {
+        width: 100%;
+        height: 25vh;
+        padding: 0px;
+    }
+    .activity {
+        padding: 0px;
+        margin-top: 300px;
+    }
+    .activity__container {
+        flex-direction: column;
+    }
+    .footer__container {
+        margin-top: 1340px;
+    }
+  }
